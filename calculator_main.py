@@ -86,6 +86,7 @@ class Main(QDialog):
 
 
 
+
         ######### layout_bottom_first #########
         ### create widget + add widget + function
         number_button_dict = {}
@@ -228,9 +229,12 @@ class Main(QDialog):
             self.chkop = False
         else:
             equation = self.solution.text() if self.equation.text()=="" else self.equation.text()
-
         equation += operation
         self.equation.setText(equation)
+        self.solution.setText(str(self.result))
+        self.temp = ""
+        self.chkop = False
+
 
 
         self.calculator(self.operator, operation)
