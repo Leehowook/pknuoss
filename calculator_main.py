@@ -85,6 +85,7 @@ class Main(QDialog):
 
 
 
+
         ######### layout_bottom_first #########
         ### create widget + add widget + function
         number_button_dict = {}
