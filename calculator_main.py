@@ -86,7 +86,6 @@ class Main(QDialog):
 
 
 
-
         ######### layout_bottom_first #########
         ### create widget + add widget + function
         number_button_dict = {}
@@ -229,12 +228,9 @@ class Main(QDialog):
             self.chkop = False
         else:
             equation = self.solution.text() if self.equation.text()=="" else self.equation.text()
+
         equation += operation
         self.equation.setText(equation)
-        self.solution.setText(str(self.result))
-        self.temp = ""
-        self.chkop = False
-
 
 
         self.calculator(self.operator, operation)
@@ -295,7 +291,7 @@ class Main(QDialog):
         self.enter = False
         self.swap = False
         self.equation.setText("")
-        self.solution.setText("0")
+        self.solution.setText("")
 
     def button_clear_entry_clicked(self):
         print(self.entry, self.operand, self.result)
@@ -305,10 +301,10 @@ class Main(QDialog):
             self.result = 0
             self.entry = 0
 
-            self.solution.setText("0")
+            self.solution.setText("")
             self.equation.setText("")
         else:
-            self.solution.setText("0")
+            self.solution.setText("")
             self.operand = 0
         self.chkop = True
         self.inputNum = False
